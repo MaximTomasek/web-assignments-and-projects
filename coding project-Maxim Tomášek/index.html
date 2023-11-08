@@ -2,52 +2,200 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Osobní blog</title>
-    <link rel="stylesheet" href="styling.css">
+    <!-- Box-icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="panel panel--large">
-        <nav>
-          <div class="nav-links">
-            <a href="login.html">Příhlásit se</a>
-            <a href="register.html">Vytvořit účet</a>
-          </div>
-        </nav>
-        <nav class="navbar">
-          <ul>
-              <li><a href="index.html">Domů</a></li>
-              <li><a href="tips.html">tipy a triky</a></li>
-              <li><a href="news.html">Novinky</a></li>
-              <li><a href="contact.html">Kontakt</a></li>
-          </ul> 
-      </nav>
+    <header>
+        <div class="nav container">
+            <a href="#" class="logo">náhodný <span>blog</span></a>
+            <a href="login.html"class="login">Příhlásit se</a>
+            <a href="register.html"class="registration">Vytvořit účet</a>
+        </div>
+    </header>
 
-        <main>
-          <div class="left-column">
-            <p>Levý sloupec. Přemýšlím na kontentem který budu psát na tento blog. Přemýšlím na kontentem který budu psát na tento blog. Přemýšlím na kontentem který budu psát na tento blog.</p>
+    <section class="home" id="home">
+        <div class="home-text container">
+            <h2 class="home-title">Blogger</h2>
+            <span class="home-subtitle">Vás zdroj skvělého obsahu</span>
         </div>
+    </section>
+
+    <section class="about container" id="about">
+        <div class="contentBx">
+            <h2 class="titleText">Aktuální témata</h2>
+            <p class="title-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eos consequuntur voluptate dolorum totam provident ducimus cupiditate dolore doloribus repellat. Saepe ad fugit similique quis quam. Odio suscipit incidunt distinctio.
+                <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed blanditiis libero pariatur ipsum suscipit voluptates aut, repellendus quos dolor autem, natus laboriosam consectetur maxime cumque, sunt magni optio? Veritatis, ea?
+            </p>
+            <a href="#" class="btn2">Přečtěte si více</a>
+        </div>
+        <div class="imgBx">
+            <img src="" alt="" class="fitBg">
+        </div>
+    </section>
+
+    <div class="post-filter container">
+        <span class="filter-item active-filter" data-filter="all">Vše</span>
+        <span class="filter-item" data-filter="tech">Tech</span>
+        <span class="filter-item" data-filter="food">Gastronomie</span>
+        <span class="filter-item" data-filter="news">Zprávy</span>
+    </div>
     
-        <div class="main-content">
-            <h1>Vítejte na mém blogu</h1>
-            <p>Toto je hlavní oblast obsahu, kam budu psát své blogové příspěvky a články.  Přemýšlím na kontentem který budu psát na tento blog. Přemýšlím na kontentem který budu psát na tento blog. Přemýšlím na kontentem který budu psát na tento blog.</p>
+    <div class="post container">
+        <!-- Post 1 -->
+        <div class="post-box tech">
+            <img src="" alt="" class="post-img">
+            <h2 class="category">Tech</h2>
+            <a href="tech.html" class="post-title">Jak vytvořit nejlepší uživatelské rozhraní s Figma stránkou</a>
+            <span class="post-date">12 únor 2023</span>
+            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea unde repudiandae iste architecto. Corporis, voluptates.</p>
+            <div class="profile">
+                <img src="" alt="" class="profile-img">
+                <span class="profile-name">MKHB</span>
+            </div>
         </div>
-    
-        <div class="right-column">
-            <p>Pravý sloupec.  Přemýšlím na kontentem který budu psát na tento blog. Přemýšlím na kontentem který budu psát na tento blog. Přemýšlím na kontentem který budu psát na tento blog.</p>
+        <!-- Post 2 -->
+        <div class="post-box food">
+            <img src="" alt="" class="post-img">
+            <h2 class="category">Tech</h2>
+            <a href="tech.html" class="post-title">Základní ovládání programu MoneyS3</a>
+            <span class="post-date">13 únor 2023</span>
+            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea unde repudiandae iste architecto. Corporis, voluptates.</p>
+            <div class="profile">
+                <img src="" alt="" class="profile-img">
+                <span class="profile-name">MKHB</span>
+            </div>
         </div>
-        </main>
-        <footer>
-            <div class="footer-links">
-                <a href="#">Ochrana osobních údajů</a>
-                <a href="#">Podmínky použití</a>
-                <a href="#">Cookies</a>
-              </div>
-              <span>
-                &copy; 2023 Blog s.r.o.
-              </span>
-            </footer>
-          </div>
-        </footer>
+        <!-- Post 3 -->
+        <div class="post-box food">
+            <img src="" alt="" class="post-img">
+            <h2 class="category">Gastronomie</h2>
+            <a href="gastronomie.html" class="post-title">Jak uvařit klasickou svíčkovou omáčku</a>
+            <span class="post-date">14 únor 2023</span>
+            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea unde repudiandae iste architecto. Corporis, voluptates.</p>
+            <div class="profile">
+                <img src="" alt="" class="profile-img">
+                <span class="profile-name">MKHB</span>
+            </div>
+        </div>
+        <!-- Post 4 -->
+        <div class="post-box news">
+            <img src="" alt="" class="post-img">
+            <h2 class="category">Tech</h2>
+            <a href="tech.html" class="post-title">Základní ovládání programu Afinity Designer</a>
+            <span class="post-date">15 únor 2023</span>
+            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea unde repudiandae iste architecto. Corporis, voluptates.</p>
+            <div class="profile">
+                <img src="" alt="" class="profile-img">
+                <span class="profile-name">MKHB</span>
+            </div>
+        </div>
+        <!-- Post 5 -->
+        <div class="post-box tech">
+            <img src="" alt="" class="post-img">
+            <h2 class="category">Tech</h2>
+            <a href="tech.html" class="post-title">Nejlepší stránky na úpravu obrázků</a>
+            <span class="post-date">16 únor 2023</span>
+            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea unde repudiandae iste architecto. Corporis, voluptates.</p>
+            <div class="profile">
+                <img src="" alt="" class="profile-img">
+                <span class="profile-name">MKHB</span>
+            </div>
+        </div>
+        <!-- Post 6 -->
+        <div class="post-box news">
+            <img src="" alt="" class="post-img">
+            <h2 class="category">Zprávy</h2>
+            <a href="news.html" class="post-title">Novinky ohledně cvičení</a>
+            <span class="post-date">17 únor 2023</span>
+            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea unde repudiandae iste architecto. Corporis, voluptates.</p>
+            <div class="profile">
+                <img src="" alt="" class="profile-img">
+                <span class="profile-name">MKHB</span>
+            </div>
+        </div>
+        <!-- Post 7 -->
+        <div class="post-box tech">
+            <img src="" alt="" class="post-img">
+            <h2 class="category">Tech</h2>
+            <a href="tech.html" class="post-title">základy html</a>
+            <span class="post-date">18 únor 2023</span>
+            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea unde repudiandae iste architecto. Corporis, voluptates.</p>
+            <div class="profile">
+                <img src="" alt="" class="profile-img">
+                <span class="profile-name">MKHB</span>
+            </div>
+        </div>
+        <!-- Post 1 -->
+        <div class="post-box news">
+            <img src="" alt="" class="post-img">
+            <h2 class="category">Zprávy</h2>
+            <a href="news.html" class="post-title">nové informace ohledně keto diety</a>
+            <span class="post-date">19 únor 2023</span>
+            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea unde repudiandae iste architecto. Corporis, voluptates.</p>
+            <div class="profile">
+                <img src="" alt="" class="profile-img">
+                <span class="profile-name">MKHB</span>
+            </div>
+        </div>
+        <!-- Post 9 -->
+        <div class="post-box food">
+            <img src="" alt="" class="post-img">
+            <h2 class="category">Gastronomie</h2>
+            <a href="gastronomie.html" class="post-title">Jak se stát kuchařem pokud nemáte pracovní zkušenosti</a>
+            <span class="post-date">20 únor 2023</span>
+            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea unde repudiandae iste architecto. Corporis, voluptates.</p>
+            <div class="profile">
+                <img src="" alt="" class="profile-img">
+                <span class="profile-name">MKHB</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="sec aboutus">
+                <h2>O mně</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus quisquam minus quo illo numquam vel incidunt pariatur hic commodi expedita tempora praesentium at iure fugiat ea, quam laborum aperiam veritatis.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Rychlé odkazy</h2>
+                <ul>
+                    <li><a href="#">Domů</a></li>
+                    <li><a href="#">Informace o mně</a></li>
+                    <li><a href="#">Ochrana osobních údajů</a></li>
+                    <li><a href="#">Podmínky použití</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+            <div class="sec contactBx">
+                <h2>Kontaktní informace</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class='bx bxs-map'></i></span>
+                        <span>Kpt.Jaroše 2410 <br> Tábor, 39003 <br> CZ</span>
+                    </li>
+                    <li>
+                        <span><i class='bx bx-envelope' ></i></span>
+                        <p><a href="maximtomasek@gmail.com">maximtomasek@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
 </body>
 </html>
