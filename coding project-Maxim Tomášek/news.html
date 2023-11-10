@@ -6,8 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    
+  <div class="panel panel--large">
+    <main>
+      <section class="heading">
+        <a href="index.html">
+          <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.939339 10.9393C0.353552 11.5251 0.353552 12.4749 0.939339 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97918 12.6066 1.3934C12.0208 0.80761 11.0711 0.80761 10.4853 1.3934L0.939339 10.9393ZM32 10.5L2 10.5L2 13.5L32 13.5L32 10.5Z" fill="black"/>
+          </svg>
+        </a>
+        <h1>Novinky ohledně cvičení</h1>
+        <a href="#">Odhlásit se</a>
+      </section>
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, mollitia nesciunt similique maxime fuga excepturi ea voluptates, at ratione maiores iste dolorem rem commodi necessitatibus suscipit. Modi facilis recusandae architecto!
+        </p>
+        <form action="news.html" method="post">
+          <textarea id="news" name="name" rows="8" required>Komentář který se vztahuje na dané téma.</textarea>
+          <input type="submit" name="edit" value="Uložit změny" class="button" />
+          <input type="submit" name="done" value="Hotovo" class="button button--secondary" />
+          <input type="submit" name="delete" value="Odstranit" class="button button--danger" />
+        </form>
+      </section>
+    </main>
+  </div>
+  <footer>
+    <div class="footer-container">
+      <div class="sec aboutus">
+          <h2>O mně</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus quisquam minus quo illo numquam vel incidunt pariatur hic commodi expedita tempora praesentium at iure fugiat ea, quam laborum aperiam veritatis.</p>
+          <ul class="sci">
+              <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+              <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+              <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+              <li><a href="#"><i class="bx bxl-linkedin"></i></a></li>
+          </ul>
+      </div>
+      <div class="sec quicklinks">
+          <h2>Rychlé odkazy</h2>
+          <ul>
+              <li><a href="#">Domů</a></li>
+              <li><a href="#">Informace o mně</a></li>
+              <li><a href="#">Ochrana osobních údajů</a></li>
+              <li><a href="#">Podmínky použití</a></li>
+              <li><a href="#">Cookies</a></li>
+          </ul>
+      </div>
+      <div class="sec contactBx">
+          <h2>Kontaktní informace</h2>
+          <ul class="info">
+              <li>
+                  <span><i class='bx bxs-map'></i></span>
+                  <span>Kpt.Jaroše 2410 <br> Tábor, 39003 <br> CZ</span>
+              </li>
+              <li>
+                  <span><i class='bx bx-envelope' ></i></span>
+                  <p><a href="maximtomasek@gmail.com">maximtomasek@gmail.com</a></p>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <p style="text-align: center">&copy; 2023</p>
+  </footer>
 </body>
 </html>
