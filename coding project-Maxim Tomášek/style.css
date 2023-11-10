@@ -47,8 +47,8 @@ a{
     color: #fff;
 }
 
-/* Header */
-header{
+/* nav */
+nav{
     position: fixed;
     top: 0;
     left: 0;
@@ -56,13 +56,13 @@ header{
     z-index: 200;
 }
 
-header.shadow{
+nav.shadow{
     background: var(--bg-color);
     box-shadow: 0 1px 4px hsl(0 4% 14% / 10%);
     transition: .5s;
 }
 
-header.shadow .logo{
+nav.shadow .logo{
     color: var(--text-color);
 }
 
@@ -285,22 +285,15 @@ header.shadow .logo{
 }
 
 footer{
-    position: relative;
-    width: 100%;
-    height: auto;
     padding: 50px 100px;
     margin-top: 3rem;
     background: #111;
-    display: flex;
-    font-family: sans-serif;
-    justify-content: space-between;
 }
 
 .footer-container{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    flex-direction: row;
 }
 
 .footer-container .sec{
