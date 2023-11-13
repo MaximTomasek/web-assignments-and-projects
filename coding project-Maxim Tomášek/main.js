@@ -1,8 +1,8 @@
 // nav background
-let header = document.querySelector("header");
+let nav = document.querySelector("nav");
 
 window.addEventListener("scroll", () => {
-    header.classList.toggle("shadow", window.scrollY > 0)
+    nav.classList.toggle("shadow", window.scrollY > 0)
 })
 
 //Filter
