@@ -57,6 +57,10 @@ a{
     color: #fff;
 }
 
+.link-black {
+    color: #000000;
+}
+
 /* nav */
 nav{
     position: fixed;
@@ -93,18 +97,23 @@ nav.shadow .logo{
     color: var(--second-color);
 }
 
-.login{
+.button {
     padding: 8px 14px;
     text-transform: uppercase;
     font-weight: 500;
     border-radius: 4px;
     background: var(--second-color);
     color: var(--bg-color);
+    border: none;
 }
 
-.login:hover{
+.button:hover {
     background: hsl(199, 98%, 56%);
     transition: .5s;
+}
+
+.button--mt {
+    margin-top: 1.5rem;
 }
 
 .registration{
@@ -590,6 +599,7 @@ footer p{
 }   
 
 .input-label, .checkbox-label {
+    display: inline-block;
     margin-top: 1.5rem;
 }
 
@@ -613,19 +623,6 @@ footer p{
     height: 1.25rem;
     border: 0;
     border-radius: 0.25rem;
-}
-
-.button {
-    padding: 8px 14px;
-    text-transform: uppercase;
-    font-weight: 500;
-    background: var(--second-color);
-    color: var(--bg-color);
-    cursor: pointer;
-}
-
-.button--right {
-    align-self: flex-end;
 }
 
 .panel-link {
