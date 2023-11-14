@@ -21,6 +21,16 @@
     background: var(--second-color);
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .main-content {
+        flex-grow: 1;
+    }
+}
+
 a{
     text-decoration: none;
 }
@@ -562,4 +572,65 @@ footer p{
     footer .footer-container .contactBx{
         width: 100%;
     }
+}
+
+/* Register */
+.panel-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.625rem;
+}
+.panel-form {
+    max-width: 400px;   
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}   
+
+.input-label, .checkbox-label {
+    margin-top: 1.5rem;
+}
+
+
+.input {
+    margin-top: 1.625rem;
+    border-radius: 0.5rem;
+    background: #fbfbfb;
+    font-size: 1.5rem;
+    padding: 0.5625rem 0.25rem;
+    border: 1;
+}
+
+.checkbox-label {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.checkbox {
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 0;
+    border-radius: 0.25rem;
+}
+
+.button {
+    padding: 8px 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    background: var(--second-color);
+    color: var(--bg-color);
+    cursor: pointer;
+}
+
+.button--right {
+    align-self: flex-end;
+}
+
+.panel-link {
+    text-align: center;
+    display: block;
+    color: #172317;
+    text-decoration: underline;
 }
