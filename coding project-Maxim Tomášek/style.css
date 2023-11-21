@@ -642,3 +642,21 @@ footer p{
     background-color: #f8f8f8;
     resize: none;
 }
+
+/*Log out link*/
+.logout {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: #172317;
+    text-decoration: underline;
+}
+
+/*Post text*/
+.post-text {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 50%;
+    box-sizing: border-box;
+}
