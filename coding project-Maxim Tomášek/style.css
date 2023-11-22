@@ -47,6 +47,10 @@ section{
     padding: 3rem 0 2rem;
 }
 
+.post-section {
+    padding-top: 0;
+}
+
 .container{
     max-width: 1068px;
     margin: auto;
@@ -237,6 +241,12 @@ nav.shadow .logo{
     box-shadow: 0 4px 14px hsl(35deg 25% 15% / 10%);
     padding: 15px;
     border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+
+    > div:last-child {
+        margin-top: auto;
+    }
 }
 
 .post-img{
@@ -252,6 +262,7 @@ nav.shadow .logo{
     font-weight: 500;
     text-transform: uppercase;
     color: var(--second-color);
+    margin-top: 0.4rem;
 }
 
 .post-title{
@@ -659,4 +670,5 @@ footer p{
     border-radius: 10px;
     width: 50%;
     box-sizing: border-box;
+    margin-bottom: 100px;
 }
