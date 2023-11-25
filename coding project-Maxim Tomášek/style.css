@@ -1,13 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap');
-*{
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    scroll-padding-top: 2rem;
-    box-sizing: border-box;
-}
-
 /* root values */
 :root{
     --container-color: #1a1e21;
@@ -15,6 +6,17 @@
     --text-color: #172317;
     --bg-color: #fff;
     --drop-shadow: #00000040;
+    --message-error: #C52525;
+    --message-success: #007418;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    box-sizing: border-box;
 }
 
 ::selection{
@@ -700,11 +702,11 @@ footer p{
 }
 
 .message--error {
-    background-color: #e61414;
+    background-color: var(--message-error);
 }
 
 .message--success {
-    background-color: #007418;
+    background-color: var(--message-success);
 }
 
 /*Login dialogue and more*/
