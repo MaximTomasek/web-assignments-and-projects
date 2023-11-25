@@ -25,7 +25,7 @@
         <div class="message message--success">
             Akce se povedla!
         </div>
-        <form action="login.html" method="post" class="panel-form">
+        <form name="login" form action="login.html" method="post" class="panel-form" onsubmit="return validateForm('login')" novalidate>
             <label for="email" class="input-label">Email</label>
             <input type="email" name="email" id="email" class="input" required>
             <label for="password" class="input-label">Heslo</label>
@@ -33,13 +33,17 @@
             <input type="submit" value="Přihlásit se" class="button button--right">
         </form>
 
+    
         <a href="register.html" class="panel-link">Vytvořit účet</a>
     </main>
     <dialog id="forgotten-password" class="dialog">
-        <form action="forgotten-password.html" method="post">
+        <div class="close-dialog-wrapper">
+            <span class="close-dialog">✕</span>
+          </div>
+        <form action="forgotten-password.html" method="post" class="panel-form panel-form--dialog">
             <label for="reg-email" class="input-label">Registrační email</label>
             <input type="email" name="email" id="reg-email" class="input" required>
-            <input type="submit" value="Onnovit zapomenuté heslo" class="button button--full">
+            <input type="submit" value="Obnovit zapomenuté heslo" class="button button--full button--dialog">
         </form>
     </dialog>
 </div>
