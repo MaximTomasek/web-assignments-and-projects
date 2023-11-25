@@ -61,8 +61,13 @@ a{
     color: #fff;
 }
 
-.link-black {
-    color: #000000;
+.link-blue {
+    color: #2881EA;;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 /* nav */
 nav{
@@ -672,3 +677,24 @@ footer p{
     box-sizing: border-box;
     margin-bottom: 100px;
 }
+
+/*Login messages*/
+.message {
+    border-radius: 0.375rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    padding: 0.375rem 1rem;
+    text-align: center;
+    display: block;
+    width: 30%;
+}
+
+.message--error {
+    background-color: #e61414;
+}
+
+.message--success {
+    background-color: #007418;
+}
+
