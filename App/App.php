@@ -11,6 +11,7 @@ class App {
     public function __construct()
     {
         session_start();
+        define('__APP_ROOT__', $_SERVER['DOCUMENT_ROOT'] . '/');
 
         try {
             EnvParser::parse("../.env");
