@@ -25,6 +25,7 @@
           Money S3 je účetní software pro živnostníky i firmy. Tento program si můžete vyzkoušet zdarma a osobně já mám s tímto programem docela dobré zkušenosti, protože na tomto programu jsem se učil účetnictví na střední škole.
         </p>
         <form action="money.html" method="post">
+          <input type="hidden" name="_method" value="PATCH">
           <textarea class="textarea-style" placeholder="Komentář který se vztahuje na dané téma." id="money" name="name" required></textarea>
           <input type="submit" name="edit" value="Uložit změny" class="button" />
           <input type="submit" name="done" value="Hotovo" class="button button--secondary" />
