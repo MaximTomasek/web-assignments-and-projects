@@ -5,9 +5,15 @@ declare(strict_types=1);
 namespace App;
 
 use App\AppCore\Exceptions\EnvFileNotFoundException;
+use App\AppCore\Exceptions\RouteNotFoundException;
+use App\AppCore\Routing\Router;
 use App\AppCore\Utils\EnvParser;
+use App\Routes\Routes;
+use Closure;
 
 class App {
+    private Router $router;
+
     public function __construct()
     {
         session_start();
@@ -16,15 +22,31 @@ class App {
         try {
             EnvParser::parse("../.env");
         } catch(EnvFileNotFoundException $e) {
-            // TODO: nahradit lepším zpracováním chyby
+            // TODO: zobrazit správnou šablonu
             echo "Chyba aplikace...";
             die();
         }
+
+        $this->router = new Router();
+    }
+
+    private function registerRoutes(): void
+    {
+        $this->router->get(Routes::Homepage, Closure::fromCallable(
+            function() {
+                echo "Hlavní stránka";
+            }));
     }
 
     public function run(): void
     {
-        // TODO: doopravdy spustit aplikaci
-        echo "Aplikace běží...";
+        try {
+            $this->registerRoutes();
+            $this->router->resolveRequest();
+        } catch (RouteNotFoundException $e) {
+            http_response_code(404);
+            // TODO: zobrazit správnou šablonu
+            echo "Stránka nenalezena!";
+        }
     }
 }
