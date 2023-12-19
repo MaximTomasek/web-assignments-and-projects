@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# místo codingschool_winter -> zadejte jméno složky s vaším projektem
+RewriteBase /web-assignments-and-projects/public/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.+)$ index.php [QSA]

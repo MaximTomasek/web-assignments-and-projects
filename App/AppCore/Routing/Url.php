@@ -20,7 +20,7 @@ class Url
             $regexArray = [];
             $values = [];
             foreach ($params as $key => $value) {
-                $regexArray[] = "/{$key}/";
+                $regexArray[] = '/{' . $key. '}/';
                 $values[] = $value;
             }
 
@@ -34,7 +34,7 @@ class Url
         $folders = getenv('APP_SUB_FOLDERS');
 
         if ($folders) {
-            $folders = substr($folders, 0, strlen($folders) - 2);
+            $folders = substr($folders, 0, strlen($folders) - 1);
         }
 
         return getenv('APP_DOMAIN') . $folders . $url;

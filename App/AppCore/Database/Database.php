@@ -4,12 +4,15 @@ declare(strict_types=1);
 
 namespace App\AppCore\Database;
 
+use App\AppCore\Routing\Url;
+use App\AppCore\Utils\Debug;
+use App\Routes\Routes;
 use PDO;
 use PDOException;
 
 class Database
 {
-    private PDO|null $connection;
+    private PDO|null $connection = null;
 
     public function __construct()
     {
@@ -26,9 +29,9 @@ class Database
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
                 )
             );
+
         } catch(PDOException $e) {
-            // TODO: nahradit lepším zpracováním chyby
-            echo "Chyba aplikace";
+            Url::redirect(Routes::AppError);
         }
     }
 
@@ -40,8 +43,7 @@ class Database
     public function getConnection(): PDO
     {
         if (!$this->connection) {
-            // TODO: nahradit lepším zpracováním chyby
-            echo "Chyba aplikace";
+            Url::redirect(Routes::AppError);
         }
 
         return $this->connection;
