@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\AppCore\Routing;
 
 use App\AppCore\Enums\HttpMethod;
+use App\AppCore\Utils\Persist;
 use App\Routes\Routes;
 use Closure;
 use App\AppCore\Exceptions\RouteNotFoundException;
@@ -121,9 +122,9 @@ class Router
 
             // Test jestli odkaz odpovídá aktuální cestě a zároveň jestli je správná i HTTP methoda požadavku
             if ($match === 1 && $route->method->value === $requestMethod) {
-                if ($route->protected && !isset($_SESSION['loggedUser'])) {
+                if ($route->protected && Persist::get('loggedUser') === null) {
                     // Přesměrování na hlavní stránku
-                    Url::redirect(Routes::AppError);
+                    Url::redirect(Routes::Homepage);
                 }
 
                 $params = []; // pomocná proměnná pro uložení parametrů z odkazu -> ['id' => 5]

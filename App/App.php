@@ -9,6 +9,9 @@ use App\AppCore\Exceptions\RouteNotFoundException;
 use App\AppCore\Routing\Router;
 use App\AppCore\Utils\EnvParser;
 use App\AppCore\View\View;
+use App\Controllers\LoginController;
+use App\Controllers\LogoutController;
+use App\Controllers\PasswordRecoveryController;
 use App\Controllers\RegisterController;
 use App\Routes\Routes;
 use Closure;
@@ -46,6 +49,20 @@ class App {
         $this->router
             ->get(Routes::Register, [RegisterController::class, 'create'])
             ->post(Routes::Register, [RegisterController::class, 'store']);
+
+        $this->router
+            ->get(Routes::Login, [LoginController::class, 'create'])
+            ->post(Routes::Login, [LoginController::class, 'store']);
+
+        $this->router
+            ->get(Routes::Logout, [LogoutController::class, 'destroy']);
+
+        $this->router
+            ->post(Routes::RequestPasswordRecovery, [PasswordRecoveryController::class, 'store']);
+
+        $this->router
+            ->get(Routes::PasswordRecovery, [PasswordRecoveryController::class, 'edit'])
+            ->patch(Routes::PasswordRecovery, [PasswordRecoveryController::class, 'update']);
     }
 
     public function run(): void
